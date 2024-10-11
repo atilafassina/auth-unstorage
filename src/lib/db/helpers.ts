@@ -1,4 +1,4 @@
-import crypto from "crypto";
+import crypto from "node:crypto";
 import { storage, User } from "./setup";
 import { z } from "zod";
 import ERRORS from "../errors";
@@ -20,6 +20,7 @@ export function validatePassword(password: string) {
 }
 
 export async function getUserByEmail(email: string) {
+  "use server";
   const users: User[] | null = await storage.getItem("user:data");
 
   if (Array.isArray(users)) {
