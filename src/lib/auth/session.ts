@@ -1,4 +1,3 @@
-"use server";
 import { cache, redirect } from "@solidjs/router";
 import { useSession } from "vinxi/http";
 
@@ -7,6 +6,8 @@ export interface SessionData {
 }
 
 export function getSession() {
+  "use server";
+
   return useSession<SessionData>({
     password: process.env.SESSION_SECRET,
   });
@@ -24,6 +25,7 @@ export const protect = cache(async () => {
 }, "protect");
 
 export async function getSessionUser(): Promise<SessionData | null> {
+  "use server";
   const { data: sessionData } = await getSession();
 
   return Boolean(sessionData.email) ? sessionData : null;
@@ -37,6 +39,7 @@ export async function setSession(email: string) {
 }
 
 export async function terminateSession() {
+  "use server";
   const session = await getSession();
 
   await session.update((user: SessionData) => (user.email = undefined));

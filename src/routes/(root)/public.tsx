@@ -15,20 +15,29 @@ export default function About() {
   return (
     <main>
       <Title>Public</Title>
-      <h1>Public</h1>
-      <p>
-        this route is unprotected. But if you're logged-in, we know about it.
-      </p>
-      <Suspense fallback="checking...">
-        <Show when={user()?.email} fallback="not logged in">
-          {(email) => (
-            <div>
-              <h2>User</h2>
-              <p>{email()}</p>
-            </div>
-          )}
-        </Show>
-      </Suspense>
+      <div class="grid place-items-center pt-10">
+        <h1 class="text-2xl text-neutral-500 font-bold pb-10">Public</h1>
+        <p class="pb-5">this route is unprotected.</p>
+        <p class="pb-10">But if you're logged in, it knows.</p>
+        <Suspense fallback="checking...">
+          <Show when={user()?.email} fallback="not logged in">
+            {(email) => (
+              <table>
+                <tbody>
+                  <tr>
+                    <td>
+                      <span class="font-bold">User</span>
+                    </td>
+                    <td>
+                      <p>{email()}</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            )}
+          </Show>
+        </Suspense>
+      </div>
     </main>
   );
 }

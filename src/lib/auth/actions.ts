@@ -1,5 +1,5 @@
-import { action, cache, redirect } from "@solidjs/router";
-import { getSessionUser, setSession } from "./session";
+import { action, redirect } from "@solidjs/router";
+import { setSession } from "./session";
 import { login, register } from "../db/helpers";
 import ERRORS from "../errors";
 

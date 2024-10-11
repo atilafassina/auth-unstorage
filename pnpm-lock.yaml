@@ -9,17 +9,17 @@ importers:
   .:
     dependencies:
       '@kobalte/core':
-        specifier: ^0.13.7
+        specifier: ^0.13.6
         version: 0.13.7(solid-js@1.9.2)
       '@solidjs/meta':
         specifier: ^0.29.4
         version: 0.29.4(solid-js@1.9.2)
       '@solidjs/router':
-        specifier: ^0.14.8
+        specifier: ^0.14.7
         version: 0.14.8(solid-js@1.9.2)
       '@solidjs/start':
-        specifier: ^1.0.1
-        version: 1.0.8(solid-js@1.9.2)(vinxi@0.3.14(@types/node@22.7.5)(ioredis@5.4.1)(terser@5.34.1))(vite@5.4.8(@types/node@22.7.5)(terser@5.34.1))
+        specifier: ^1.0.8
+        version: 1.0.8(solid-js@1.9.2)(vinxi@0.4.3(@types/node@22.7.5)(ioredis@5.4.1)(terser@5.34.1))(vite@5.4.8(@types/node@22.7.5)(terser@5.34.1))
       class-variance-authority:
         specifier: ^0.7.0
         version: 0.7.0
@@ -30,7 +30,7 @@ importers:
         specifier: ^8.4.47
         version: 8.4.47
       solid-js:
-        specifier: ^1.9.2
+        specifier: ^1.9.1
         version: 1.9.2
       tailwind-merge:
         specifier: ^2.5.3
@@ -42,8 +42,8 @@ importers:
         specifier: ^1.12.0
         version: 1.12.0(ioredis@5.4.1)
       vinxi:
-        specifier: ^0.3.11
-        version: 0.3.14(@types/node@22.7.5)(ioredis@5.4.1)(terser@5.34.1)
+        specifier: ^0.4.1
+        version: 0.4.3(@types/node@22.7.5)(ioredis@5.4.1)(terser@5.34.1)
       zod:
         specifier: ^3.23.8
         version: 3.23.8
@@ -2664,8 +2664,8 @@ packages:
   validate-html-nesting@1.2.2:
     resolution: {integrity: sha512-hGdgQozCsQJMyfK5urgFcWEqsSSrK63Awe0t/IMR0bZ0QMtnuaiHzThW81guu3qx9abLi99NEuiaN6P9gVYsNg==}
 
-  vinxi@0.3.14:
-    resolution: {integrity: sha512-z92mH3xmnnsodTAURFnfEg4FnCo95JnjjY08nyjl3Z69xVRtQ5V6ckfV9bMp/5G6yT52wnmoLXAfPRPF6vfG+A==}
+  vinxi@0.4.3:
+    resolution: {integrity: sha512-RgJz7RWftML5h/qfPsp3QKVc2FSlvV4+HevpE0yEY2j+PS/I2ULjoSsZDXaR8Ks2WYuFFDzQr8yrox7v8aqkng==}
     hasBin: true
 
   vite-plugin-solid@2.10.2:
@@ -3488,11 +3488,11 @@ snapshots:
     dependencies:
       solid-js: 1.9.2
 
-  '@solidjs/start@1.0.8(solid-js@1.9.2)(vinxi@0.3.14(@types/node@22.7.5)(ioredis@5.4.1)(terser@5.34.1))(vite@5.4.8(@types/node@22.7.5)(terser@5.34.1))':
+  '@solidjs/start@1.0.8(solid-js@1.9.2)(vinxi@0.4.3(@types/node@22.7.5)(ioredis@5.4.1)(terser@5.34.1))(vite@5.4.8(@types/node@22.7.5)(terser@5.34.1))':
     dependencies:
-      '@vinxi/plugin-directives': 0.4.3(vinxi@0.3.14(@types/node@22.7.5)(ioredis@5.4.1)(terser@5.34.1))
-      '@vinxi/server-components': 0.4.3(vinxi@0.3.14(@types/node@22.7.5)(ioredis@5.4.1)(terser@5.34.1))
-      '@vinxi/server-functions': 0.4.3(vinxi@0.3.14(@types/node@22.7.5)(ioredis@5.4.1)(terser@5.34.1))
+      '@vinxi/plugin-directives': 0.4.3(vinxi@0.4.3(@types/node@22.7.5)(ioredis@5.4.1)(terser@5.34.1))
+      '@vinxi/server-components': 0.4.3(vinxi@0.4.3(@types/node@22.7.5)(ioredis@5.4.1)(terser@5.34.1))
+      '@vinxi/server-functions': 0.4.3(vinxi@0.4.3(@types/node@22.7.5)(ioredis@5.4.1)(terser@5.34.1))
       defu: 6.1.4
       error-stack-parser: 2.1.4
       glob: 10.4.5
@@ -3597,7 +3597,7 @@ snapshots:
     transitivePeerDependencies:
       - uWebSockets.js
 
-  '@vinxi/plugin-directives@0.4.3(vinxi@0.3.14(@types/node@22.7.5)(ioredis@5.4.1)(terser@5.34.1))':
+  '@vinxi/plugin-directives@0.4.3(vinxi@0.4.3(@types/node@22.7.5)(ioredis@5.4.1)(terser@5.34.1))':
     dependencies:
       '@babel/parser': 7.25.7
       acorn: 8.12.1
@@ -3608,29 +3608,29 @@ snapshots:
       magicast: 0.2.11
       recast: 0.23.9
       tslib: 2.7.0
-      vinxi: 0.3.14(@types/node@22.7.5)(ioredis@5.4.1)(terser@5.34.1)
+      vinxi: 0.4.3(@types/node@22.7.5)(ioredis@5.4.1)(terser@5.34.1)
 
-  '@vinxi/server-components@0.4.3(vinxi@0.3.14(@types/node@22.7.5)(ioredis@5.4.1)(terser@5.34.1))':
+  '@vinxi/server-components@0.4.3(vinxi@0.4.3(@types/node@22.7.5)(ioredis@5.4.1)(terser@5.34.1))':
     dependencies:
-      '@vinxi/plugin-directives': 0.4.3(vinxi@0.3.14(@types/node@22.7.5)(ioredis@5.4.1)(terser@5.34.1))
+      '@vinxi/plugin-directives': 0.4.3(vinxi@0.4.3(@types/node@22.7.5)(ioredis@5.4.1)(terser@5.34.1))
       acorn: 8.12.1
       acorn-loose: 8.4.0
       acorn-typescript: 1.4.13(acorn@8.12.1)
       astring: 1.9.0
       magicast: 0.2.11
       recast: 0.23.9
-      vinxi: 0.3.14(@types/node@22.7.5)(ioredis@5.4.1)(terser@5.34.1)
+      vinxi: 0.4.3(@types/node@22.7.5)(ioredis@5.4.1)(terser@5.34.1)
 
-  '@vinxi/server-functions@0.4.3(vinxi@0.3.14(@types/node@22.7.5)(ioredis@5.4.1)(terser@5.34.1))':
+  '@vinxi/server-functions@0.4.3(vinxi@0.4.3(@types/node@22.7.5)(ioredis@5.4.1)(terser@5.34.1))':
     dependencies:
-      '@vinxi/plugin-directives': 0.4.3(vinxi@0.3.14(@types/node@22.7.5)(ioredis@5.4.1)(terser@5.34.1))
+      '@vinxi/plugin-directives': 0.4.3(vinxi@0.4.3(@types/node@22.7.5)(ioredis@5.4.1)(terser@5.34.1))
       acorn: 8.12.1
       acorn-loose: 8.4.0
       acorn-typescript: 1.4.13(acorn@8.12.1)
       astring: 1.9.0
       magicast: 0.2.11
       recast: 0.23.9
-      vinxi: 0.3.14(@types/node@22.7.5)(ioredis@5.4.1)(terser@5.34.1)
+      vinxi: 0.4.3(@types/node@22.7.5)(ioredis@5.4.1)(terser@5.34.1)
 
   abbrev@1.1.1: {}
 
@@ -5482,7 +5482,7 @@ snapshots:
 
   validate-html-nesting@1.2.2: {}
 
-  vinxi@0.3.14(@types/node@22.7.5)(ioredis@5.4.1)(terser@5.34.1):
+  vinxi@0.4.3(@types/node@22.7.5)(ioredis@5.4.1)(terser@5.34.1):
     dependencies:
       '@babel/core': 7.25.7
       '@babel/plugin-syntax-jsx': 7.25.7(@babel/core@7.25.7)

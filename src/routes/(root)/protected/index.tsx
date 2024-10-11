@@ -10,24 +10,34 @@ export const route = {
 };
 
 export default function Protected() {
-  const user = createAsync(() => getLoggedUser());
+  const user = createAsync(() => getLoggedUser(), { deferStream: true });
 
   return (
     <main>
       <Title>Protected</Title>
-      <h1>Protected</h1>
-      <p>
-        This route has protected data, if you try to acces it while logged out,
-        you'll be redirected
-      </p>
-      <Show when={user()?.email} fallback="not logged in">
-        {(email) => (
-          <div>
-            <h2>User</h2>
-            <p>{email()}</p>
-          </div>
-        )}
-      </Show>
+      <div class="grid place-items-center pt-10">
+        <h1 class="text-2xl text-neutral-500 font-bold pb-10">Protected</h1>
+        <p class="pb-5">
+          This route has protected data, if you try to acces it while logged
+          out, you'll be redirected
+        </p>
+        <Show when={user()?.email} fallback="not logged in">
+          {(email) => (
+            <table>
+              <tbody>
+                <tr>
+                  <td>
+                    <span class="font-bold">User</span>
+                  </td>
+                  <td>
+                    <p>{email()}</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          )}
+        </Show>
+      </div>
     </main>
   );
 }

@@ -71,7 +71,7 @@ export function Login() {
             <CardHeader>
               <CardTitle>Login</CardTitle>
               <CardDescription>
-                Make changes to your login here. Click save when you're done.
+                The Doors of Durin, Lord of Moria. Speak, friend, and enter.
               </CardDescription>
             </CardHeader>
             <FormField formType="login" status={loggingIn.pending} />
@@ -82,7 +82,9 @@ export function Login() {
             <CardHeader>
               <CardTitle>Register</CardTitle>
               <CardDescription>
-                Change your password here. After saving, you'll be logged out.
+                Halt, traveler! You stand before the gates of Khazad-dûm,
+                greatest of all Dwarven realms. State your purpose. None may
+                pass these gates without the permission of Durin's line.
               </CardDescription>
             </CardHeader>
             <FormField formType="register" status={loggingIn.pending} />

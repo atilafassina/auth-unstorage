@@ -32,7 +32,6 @@ export default function Layout(props: ParentProps) {
           </div>
         </div>
       </header>
-
       {props.children}
     </main>
   );
