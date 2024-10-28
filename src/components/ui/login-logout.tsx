@@ -9,7 +9,7 @@ interface Props {
 
 export function LoginLogout(props: Props) {
   return (
-    <Show when={props?.user?.()?.email} fallback={<A href="/">Login</A>} keyed>
+    <Show when={props.user?.()?.email} fallback={<A href="/">Login</A>}>
       <form action={logout} method="post">
         <button name="logout" type="submit">
           Logout

@@ -1,7 +1,8 @@
-import { action, redirect } from "@solidjs/router";
-import { setSession } from "./session";
+import { action, redirect, revalidate } from "@solidjs/router";
+import { getSessionUser, setSession } from "./session";
 import { login, register } from "../db/helpers";
 import ERRORS from "../errors";
+import { getLoggedUser } from "./user";
 
 export const authUser = action(async (formData: FormData) => {
   "use server";
@@ -27,6 +28,7 @@ export const authUser = action(async (formData: FormData) => {
   } catch (e) {
     throw e;
   }
-
-  throw redirect("/protected", { revalidate: "logged-user" });
+  throw redirect("/protected", {
+    revalidate: [getSessionUser.key, getLoggedUser.key],
+  });
 });

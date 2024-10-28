@@ -24,12 +24,20 @@ export const protect = cache(async () => {
   return null;
 }, "protect");
 
-export async function getSessionUser(): Promise<SessionData | null> {
+// export async function getSessionUser(): Promise<SessionData | null> {
+//   "use server";
+//   const { data: sessionData } = await getSession();
+
+//   return Boolean(sessionData.email) ? sessionData : null;
+// }
+
+export const getSessionUser = cache(async () => {
   "use server";
+
   const { data: sessionData } = await getSession();
 
   return Boolean(sessionData.email) ? sessionData : null;
-}
+}, "session-user");
 
 export async function setSession(email: string) {
   "use server";

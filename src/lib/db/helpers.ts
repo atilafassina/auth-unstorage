@@ -19,16 +19,18 @@ export function validatePassword(password: string) {
   }
 }
 
-export async function getUserByEmail(email: string) {
-  "use server";
+export async function getAllUsers() {
   const users: User[] | null = await storage.getItem("user:data");
 
-  if (Array.isArray(users)) {
-    const user = users.find((user) => user.email === email);
-    return user;
-  } else {
-    return null;
-  }
+  return users;
+}
+
+export async function getUserByEmail(email: string) {
+  "use server";
+  const users = await getAllUsers();
+  const user = users?.find((user) => user.email === email);
+
+  return user;
 }
 
 export async function hasAccount(email: string) {

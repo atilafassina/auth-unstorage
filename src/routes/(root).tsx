@@ -2,16 +2,16 @@ import { A, createAsync, type RouteDefinition } from "@solidjs/router";
 import { type ParentProps } from "solid-js";
 import { Navigation } from "../components/ui/navigation";
 import { LoginLogout } from "../components/ui/login-logout";
-import { getLoggedUser } from "~/lib/auth/user";
+import { getSessionUser } from "~/lib/auth/session";
 
 export const route: RouteDefinition = {
   preload() {
-    return getLoggedUser();
+    return getSessionUser();
   },
 };
 
 export default function Layout(props: ParentProps) {
-  const user = createAsync(() => getLoggedUser());
+  const user = createAsync(() => getSessionUser());
 
   return (
     <main class="min-h-screen bg-neutral-200 text-neutral-700">
