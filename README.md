@@ -1,7 +1,7 @@
 # Auth on SolidStart
 
-## Stack
+This is a proto-template for handling auth with [SolidStart](https://docs.solidjs.com/solid-start)
 
-- SolidStart
-- Unstorage
-- Solid-UI
+Check the video for more info:
+
+[![youtube cover](/ytube-cover.png)](https://youtu.be/IXvLskm6pxg)
